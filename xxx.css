@@ -1,0 +1,276 @@
+.map_embed
+{
+	max-width: 100% ;
+	height: 0 ;
+	margin: 0 ;
+	padding: 0 0 56.25% ;
+
+	overflow: hidden ;
+
+	position: relative ;
+	top: 0 ;
+	left: 0 ;
+}
+
+.map_embed > div
+{
+	position: absolute ;
+	top: 0 ;
+	left: 0 ;
+
+	width: 100% ;
+	height: 100% ;
+
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.map_embed img
+{
+	max-width: none ;
+}
+
+#infoWindow {
+  width: 500px;
+  height: 200px;
+}
+
+
+div.scrollBody{
+    display:block;
+  overflow-y:scroll;
+  height:100%;
+}
+
+.iw-title {
+    display:block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 10px;
+    background-color: #DC373F;
+    color: white;
+    margin: 0px;
+    border-radius: 2px 2px 0 0; /* In accordance with the rounding of the default infowindow corners. */
+}
+
+.gm-style-iw {
+   width: 350px !important;
+   top: 15px !important;
+   left: 0 !important;
+   background-color: #fff;
+   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border: 1px solid rgba(230, 79, 87, 0.6);
+   border-radius: 2px 2px 5px 5px;
+}
+
+.iw-bottom-gradient {
+      position: absolute;
+      width: 350px;
+      height: 25px;
+      bottom: 0px;
+      right: 0px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+   }
+
+
+
+
+/* :::::: slideshow :::::: */
+ 
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+}
+ 
+input[type="radio"] {
+  display: none;
+}
+ 
+.slideshow {
+  position: relative;
+  width: 100%;
+  top:0px;
+}
+ 
+.slideContents {
+  position: relative;
+  background: white;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+}
+ 
+.slideContents,
+.slideContents section {
+  width: 100%;
+  height: 100%;
+}
+ 
+.slideContents section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, transform .6s;
+}
+ 
+.slideContents section img {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
+  padding: 0 50px;
+  vertical-align: middle;
+}
+ 
+/* :::::: slideshow mechanism :::::: */
+ 
+.switch1:checked ~ .slideshow .slideContents .slide1,
+.switch2:checked ~ .slideshow .slideContents .slide2,
+.switch3:checked ~ .slideshow .slideContents .slide3,
+.switch4:checked ~ .slideshow .slideContents .slide4,
+.switch5:checked ~ .slideshow .slideContents .slide5 {
+  z-index: 1;
+  position: relative;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+ 
+.switch1:checked ~ .slideshow .slideContents .slide1,
+.switch2:checked ~ .slideshow .slideContents .slide2,
+.switch3:checked ~ .slideshow .slideContents .slide3,
+.switch4:checked ~ .slideshow .slideContents .slide4,
+.switch5:checked ~ .slideshow .slideContents .slide5 {
+  opacity: 1;
+}
+ 
+.switch1:checked ~ .slideshow .slideContents .slide5,
+.switch1:checked ~ .slideshow .slideContents .slide4,
+.switch2:checked ~ .slideshow .slideContents .slide1,
+.switch2:checked ~ .slideshow .slideContents .slide5,
+.switch3:checked ~ .slideshow .slideContents .slide2,
+.switch3:checked ~ .slideshow .slideContents .slide1,
+.switch4:checked ~ .slideshow .slideContents .slide3,
+.switch4:checked ~ .slideshow .slideContents .slide2,
+.switch5:checked ~ .slideshow .slideContents .slide4,
+.switch5:checked ~ .slideshow .slideContents .slide3 {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+ 
+.switch1:checked ~ .slideshow .slideContents .slide3,
+.switch2:checked ~ .slideshow .slideContents .slide4,
+.switch3:checked ~ .slideshow .slideContents .slide5,
+.switch4:checked ~ .slideshow .slideContents .slide1,
+.switch5:checked ~ .slideshow .slideContents .slide2,
+.switch1:checked ~ .slideshow .slideContents .slide4,
+.switch2:checked ~ .slideshow .slideContents .slide5,
+.switch3:checked ~ .slideshow .slideContents .slide1,
+.switch4:checked ~ .slideshow .slideContents .slide2,
+.switch5:checked ~ .slideshow .slideContents .slide3 {
+  transition-duration: 0s;
+}
+ 
+
+/* :::::: timer mechanism :::::: */
+ 
+.slideContents section {
+  -webkit-animation: autoplay 30s infinite;
+  animation: autoplay 30s infinite;
+}
+ 
+.slideContents section {
+  -webkit-transform: none;
+  transform: none;
+  transition: none;
+}
+ 
+.slideContents .slide1 {
+  position: relative;
+  -webkit-animation-delay: 0;
+  animation-delay: 0;
+}
+ 
+.slideContents .slide2 {
+  -webkit-animation-delay: -24s;
+  animation-delay: -24s;
+}
+ 
+.slideContents .slide3 {
+  -webkit-animation-delay: -18s;
+  animation-delay: -18s;
+}
+ 
+.slideContents .slide4 {
+  -webkit-animation-delay: -12s;
+  animation-delay: -12s;
+}
+ 
+.slideContents .slide5 {
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+ 
+@-webkit-keyframes autoplay {
+  0% { -webkit-transform: translateX(0); }
+  16% { -webkit-transform: translateX(0); }
+  20% { -webkit-transform: translateX(-100%); }
+  20.001% { -webkit-transform: translateX(100%); }
+  96% { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(0); }
+}
+@keyframes autoplay {
+  0% { transform: translateX(0); }
+  16% { transform: translateX(0); }
+  20% { transform: translateX(-100%); }
+  20.001% { transform: translateX(100%); }
+  96% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+
+
+/* :::::: wiki用 :::::: */
+label {
+    background: #E2373F;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    margin: 0;
+    border: 1px solid #fff;
+}
+
+input[type="checkbox"].on-off{
+    display: none;
+}
+
+.menu ul {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu li {
+    padding: 5px;
+}
+
+input[type="checkbox"].on-off + ul{
+    height: 0;
+    overflow: hidden;
+}
+
+input[type="checkbox"].on-off:checked + ul{
+    height: 150px;
+}
