@@ -10,7 +10,9 @@ APIをGoogleMap,Wikipedia,Openweathermapの3つ使用しています。
 ### GoogleMapAPI
 GoogleMapのAPIです。デザインなどをカスタマイズできます。  
 プロットした座標の緯度経度を取得できます。  
-![googlemap](https://cloud.githubusercontent.com/assets/17490886/24073327/4f23f9a6-0c39-11e7-88df-cd94a396d5f3.gif)
+<!-- ![googlemap](https://cloud.githubusercontent.com/assets/17490886/24073327/4f23f9a6-0c39-11e7-88df-cd94a396d5f3.gif) -->
+
+
 ### 天気API
 取得した座標から、OpenweathermapにAPIを投げています。 ３時間ごとの天気予報を表示しています。
 ![Weather](https://cloud.githubusercontent.com/assets/17490886/24073279/7872e44e-0c38-11e7-9f81-172351f02d27.gif)
