@@ -1,7 +1,7 @@
 "use strict";
-const MY_API_KEY = "AIzaSyAOs2eFgQwUI-g7hFcNRJ5zu31BWsUSllI";
-const WET_API_KEY = "7118df305d5ec83a65f148cc3349e651";
-const INST_API_KEY = "21a53f17582c4bfc9b123a138cd3312a";
+const MY_API_KEY = "***************";
+const WET_API_KEY = "***************";
+const INST_API_KEY = "***************";
 let markers = [];
 let windows = [];
 
